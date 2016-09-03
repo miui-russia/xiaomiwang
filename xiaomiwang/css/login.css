@@ -1,0 +1,32 @@
+@charset 'utf-8';
+html,
+body{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+}
+.wrap{
+	-height: 592px;
+	width:854px;
+	margin:0 auto;
+	margin-top: 100px;
+	background-color: #eee;
+}
+.layout{
+	width:854px;
+	height:512px;
+	margin:0 auto;
+	
+}
+.external_logo_area{
+	width: 55px;
+	height: 55px;
+	background-color: #FF6700;
+	margin: 0 auto;
+	margin-bottom:55px;
+}
