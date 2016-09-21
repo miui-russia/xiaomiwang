@@ -1,0 +1,117 @@
+.footer-service{
+	padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.site-footer {
+	height: 272px;
+}
+.site-footer .list-service li{
+	float: left;
+    width: 19.8%;
+    height: 25px;
+    border-left: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+}
+.site-footer .list-service li:first-child{
+	border-left: 0;
+}
+.site-footer .list-service a{
+	color:#616161;
+	transition: color .2s;
+	font-size: 18px;
+}
+.site-footer .list-service a:hover{
+	color: #FF6700;
+}
+.site-footer .footer-links{
+	padding: 40px 0;
+}
+/**/
+.site-footer .footer-links .col-links{
+	float: left;
+	width: 160px;
+	height: 112px;
+}
+.site-footer .footer-links .col-links dt{
+	margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242
+}
+.col-contact{
+	float: right;
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}
+.site-footer .footer-links .col-contact .phone{
+	margin: 0 0 5px;
+    font-size: 22px;
+    line-height: 1;
+    color: #ff6700;
+}
+.site-footer .footer-links .col-contact  p{
+	font-size: 12px;
+	margin: 0 0 16px;
+}
+.col-contact .btn{
+	text-align: center;
+    font-size: 12px;
+    border: 1px solid #b0b0b0;
+    transition: all .4s;
+}
+.col-contact .btn:hover{
+	color: #fff;
+	background: #FF6700;
+	border-color: #FF6700;
+}
+.btn-line-primary{
+	color: #FF6700;
+	border-color: #FF6700;
+	background: #fff;
+}
+.btn-small{
+	width: 118px;
+	height: 28px;
+	line-height: 28px;
+	display: inline-block;
+}
+/*siteinfo*/
+.site-info{
+	padding: 30px 0;
+	font-size: 12px;
+	background-color: #fafafa;
+}
+.site-info .container{
+	position: relative;
+	
+}
+.site-info .container .logo{
+	width: 57px;
+	height: 57px;
+	margin-right: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../img/menu/logo-footer.png)no-repeat;
+}
+.info-text{
+	-width: 750px;
+	height: 54px;
+	position: absolute;
+	top: 0;
+	left: 67px;
+}
+.site-info .container .sites{
+	margin-bottom: 4px;
+}
+.site-info .container .sites a{
+	color: #333;
+}
+.info-links{
+	float: right;
+}
