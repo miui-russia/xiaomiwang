@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" href="css/basic.css" />
+		<link rel="stylesheet" href="css/shopcart.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+		
+	</head>
+	<body>
+		<div class="site-header site-mini-header">
+			<div class="container">
+				<div class="header-logo">
+					<a href="" class="logo">
+						<img src="img/menu/mi-logo.png" alt="" />
+						<img class="img-home" src="img/menu/mi-home.png"/>
+					</a>
+				</div>
+				<div class="header-title has-more">
+					<h2>我的购物车</h2>
+					<p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+				</div>
+				<div class="topbar-info" id="J_userInfo">
+					<span class="user">
+						<a href="" class="user-name">
+							<span class="name">小白不懂</span>
+							<i class="iconfont" style="font-size: 12px;">&#xe631;</i>
+						</a>
+						<ul class="user-menu">
+							<li>
+								<a href="" target="_blank">个人中心</a>
+							</li>
+							<li>
+								<a href="" target="_blank">评价晒单</a>
+							</li>
+							<li>
+								<a href="" target="_blank">我的喜欢</a>
+							</li>
+							<li>
+								<a href="" target="_blank">小米账户</a>
+							</li>
+							<li>
+								<a href="" target="_blank">退出登录</a>
+							</li>	
+						</ul>
+					</span>
+					<span class="sep">|</span>
+					<a href="" class="link link-order" style="color: #757575;">
+						我的订单
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--购物车-->
+		<div class="page-main">
+			<div class="container">
+				<div id="J_cartBox">
+					<div class="cart-goods-list">
+						<!--头部-->
+						<div class="list-head clearfix">
+							<div class="col col-check">
+								<input type="checkbox" class="iconfont icon-checkbox icon-checkbox-selected"></input>
+								全选
+							</div>
+							<div class="col col-img">&nbsp;</div>
+							<div class="col col-name">商品名称</div>
+							<div class="col col-price">单价</div>
+							<div class="col col-num">数量</div>
+							<div class="col col-total">小计</div>
+							<div class="col col-action">操作</div>
+						</div>
+						<!--拼接数据-->
+						<div class="list-body" id="J_cartListBody">
+							<!--<div class="item-box">
+								<div class="item-table J_cartGoods">
+									<div class="item-row clearfix">
+										<div class="col col-check">
+											<i class="iconfont icon-checkbox icon-checkbox-selected J_itemCheckbox"
+												 data-status="1">√</i>
+										</div>
+										<div class="col col-img">
+											<a href="javascript:;">
+												<img src="img/product/mi5-yin.jpg" style="width: 80px; height:80px;"/>
+											</a>
+										</div>
+										<div class="col col-name">
+											<h3 class="name">
+												<a href="javascript:;" target="_blank"> 小米手机5 全网通高配版 金色 64GB </a>
+											</h3>
+											<p class="desc">适配机型:<span>小米手机5</span></p>
+										</div>
+										<div class="col col-price"><span>2099</span>元</div>
+										<div class="col col-num">
+											<div class="change-goods-num clearfix J_changeGoodsNum">
+												<a href="javascript:;" class="J_minus">-</a>
+												<input type="text" name="" value="1" class="goods-num J_goodsNum"
+													data-num="1" data-buylimit="50"/>
+												<a href="javascript:;" class="J_plus">+</a>
+												<div class="msg J_canBuyLimit">还可买 10 件以上</div>
+											</div>
+										</div>
+										<div class="col col-total"><span>2099</span>元 </div>
+										<div class="col col-action">
+											<a href="javascript:;" id="2160700018_0_buy" 
+												data-msg="确定删除吗？" title="删除" class="del J_delGoods">x</a>
+										</div>
+									</div>
+								</div>
+							</div>-->
+						</div>
+						<!--数据结束-->
+					</div>
+					<!--结算-->
+					<div class="cart-bar clearfix cart-bar-fixed">
+						<!---->
+						<div class="section-left">
+							<a href="javascript:;" class="back-shopping J_goShoping">继续购物</a>
+							<span class="cart-total">
+								共 <i style="font-style: normal;" id="J_cartTotalNum">3</i> 件商品 , 已选择 
+								<i style="font-style: normal;" id="J_selTotalNum" class="user-goods-amount">0</i> 件
+							</span>
+						</div>
+						<!---->
+						<span class="total-price">
+                    		合计（不含运费）：
+                    		<em id="J_cartTotalPrice">0.00</em>
+                    		元
+						</span>
+						<a href="javascript:;" class="btn btn-a btn btn-primary">
+							去结算
+						</a>
+					</div>
+					<!---->
+				</div>
+			</div>
+		</div>
+		<!--摸态框-->
+		<div class="model">
+			<div class="cover"></div>
+			<div class="content">
+				<div class="title">&times;</div>
+				<h2>确定删除吗？</h2>
+				<div class="btn btn-left">取消</div>
+				<div class="btn btn-right">确定</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="site-footer">
+			<div class="container">
+				<div class="footer-service">
+					<ul class="list-service clearfix">
+						<li>
+							<a href="" class="nofollow">
+								<i class="iconfont"></i>
+								1小时快修服务
+							</a>
+						</li>
+						<li>
+							<a href="" class="nofollow">
+								<i class="iconfont"></i>
+								7天无理由退货
+							</a>
+						</li>
+						<li>
+							<a href="" class="nofollow">
+								<i class="iconfont"></i>
+								15天免费换货
+							</a>
+						</li>
+						<li>
+							<a href="" class="nofollow">
+								<i class="iconfont"></i>
+								满150元包邮
+							</a>
+						</li>
+						<li>
+							<a href="" class="nofollow">
+								<i class="iconfont"></i>
+								520余家售后网点
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--footer-->
+				<div class="footer-links clearfix">
+					<dl class="col-links col-links-first">
+						<dt>帮助中心</dt>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+					</dl>
+					<dl class="col-links">
+						<dt>帮助中心</dt>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+						<dd><a href="" class="nofollow"></a>账户管理</dd>
+					</dl>
+					<div class="col-contact">
+						<p class="phone">400-100-5678</p>
+						<p>
+							<span class="J_serviceTime-normal">
+								周一至周日 8:00-18:00
+							</span><br />
+							（仅收市话费）
+						</p>
+						<a href="javascript:;" class="btn btn-line-primary btn-small">
+							<i class="iconfont"></i>
+							 24小时在线客服
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--site-info-->
+		<div class="site-info">
+			<div class="container" style="height: 57px;">
+				<div class="logo"></div>
+				<div class="info-text">
+					<p class="sites">
+						<a href="" class="nofollow">小米商城</a><span class="sep">|</span>
+						<a href="" class="nofollow">MIUI</a><span class="sep">|</span>
+						<a href="" class="nofollow">米聊</a><span class="sep">|</span>
+						<a href="" class="nofollow">多看书城</a><span class="sep">|</span>
+						<a href="" class="nofollow">小米路由器</a><span class="sep">|</span>
+						<a href="" class="nofollow">视频电话</a><span class="sep">|</span>
+						<a href="" class="nofollow">小米后院</a><span class="sep">|</span>
+						<a href="" class="nofollow">小米天猫店</a><span class="sep">|</span>
+						<a href="" class="nofollow">小米淘宝直营店</a><span class="sep">|</span>
+						<a href="" class="nofollow">小米网盟</a><span class="sep">|</span>
+						<a href="" class="nofollow">问题反馈</a><span class="sep">|</span>
+						<a href="" class="nofollow">Select Region</a>
+					</p>
+					<p style="color: #CCCCCC;">©<a href="//www.mi.com/"></a>
+						京ICP证110507号 京ICP备10046444号
+						<a href="" style="color: #CCCCCC;">京公网安备11010802020134号 </a>
+						<a href="" style="color: #CCCCCC;">京网文[2014]0059-0009号</a><br />
+						 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+					</p>
+				</div>
+				<div class="info-links">
+					<img src="img/menu/ic.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<script type="text/javascript" src="js/shopcart.js" ></script>
+		<script type="text/javascript">
+//			console.log($.cookie('xiaomi-cart'));
+		</script>
+	</body>
+</html>

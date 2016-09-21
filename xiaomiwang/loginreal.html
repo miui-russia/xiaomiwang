@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/basic.css" />
+		<link rel="stylesheet" href="css/loginreal.css" />
+	</head>
+	<body>
+		<div class="wraper">
+			<div class="main-box">
+					<div class="ercode">
+						<a href="javascript:;" class="ercode-img"></a>
+					</div>
+					<div class="header-tit">
+						<div class="head-logo">
+							<span></span>
+						</div>
+						<p>小米帐号登录</p>
+					</div>
+				<form action="">
+					<div class="input-box">
+						<div class="input-item">
+							<input type="text" class="username" name="username" placeholder="邮箱/手机号码/小米账号"/>
+						</div>
+						<div class="input-item">
+							<input type="password" class="password" name="password" placeholder="密码" />
+						</div>
+					</div>
+					<div class="error">
+						<span></span>
+						<i>用户名或者密码不正确</i>
+					</div>
+					<div class="btn-login">
+						立即登陆
+					</div>
+					<!--其他登录方式-->
+					<div class="other-login-type">
+						<fieldset class="other-type-tit">
+							<legend class="other-type-txt">其他方式登录</legend>
+						</fieldset>
+						<div class="other-type-link">
+							<a href="" class="icon-type btn-qq">
+								<i class="btn_sns_icontype btn-weibo"></i>
+							</a>
+							<a href="" class="icon-type btn-wb">
+								<i class="btn_sns_icontype btn-alipay"></i>
+							</a>
+							<a href="" class="icon-type btn-ali">
+								<i class="btn_sns_icontype btn-wechat"></i>
+							</a>
+						</div>
+					</div>
+				</form>
+				<!--底部注册小米账号-->
+				<div class="n_links_area">
+					<a href="login.html" class="outer_link">注册小米账号</a>
+					<span>|</span>
+					<a href="" class="outer_link">忘记密码？</a>
+				</div>
+			</div>
+		</div>
+		<!--扫码登录-->
+		<div class="container">
+			<div class="con-box">
+				<div class="close">&times;</div>
+			</div>
+			<div class="eq-code">
+				<div class="code-hd">
+					<h3 class="code-tit">小米帐号扫码登录</h3>
+					<p>请使用最新版MIUI中“我的小米”进行扫码登录</p>
+				</div>
+				<div class="code-iframe">
+					<img src="img/logineq.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="n-footer">
+			<div class="nf-link-area">
+				<a href="" class="lang-select-li current">简体</a>
+				<span>|</span>
+				<a href="" class="lang-select-li current">繁体</a>
+				<span>|</span>
+				<a href="" class="lang-select-li current">English</a>
+				<span>|</span>
+				<a href="" class="lang-select-li current">常见问题</a>
+			</div>
+			<p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+		<!--<script type="text/javascript" src="js/loginreal.js" ></script>-->
+		<script type="text/javascript" src="js/login-tab.js" ></script>
+		<script>
+			$(function(){
+				$('.btn-login').click(function(){
+					var uname = $('.username').val();
+					var upsw = $('.password').val();
+					//读取用户信息cookie
+					var userinfo = JSON.parse( $.cookie('userinfo') );
+					//判断用户名及密码是否正确
+					if(uname == userinfo.phone && upsw == userinfo.passwd){
+						userinfo.isLogin = true;
+						//重新存储
+						$.cookie('userinfo',JSON.stringify(userinfo),{expires:7,path:'/ajax'});
+						//跳转到...
+						$('.error').show();
+						$('.error i').text('登录成功，正在为您跳转...');
+						setTimeout(function(){
+							location.href = 'index.html';
+						},2000)
+					}else{
+						$('.error').show();
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
